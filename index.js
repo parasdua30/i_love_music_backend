@@ -26,7 +26,7 @@ import userRouter from "./routes/user.routes.js";
 import artistsRouter from "./routes/artists.routes.js";
 import albumsRouter from "./routes/albums.routes.js";
 import discoverRouter from "./routes/discover.routes.js";
-// import songsRouter from "./routes/songs.routes.js";
+import songsRouter from "./routes/songs.routes.js";
 // import searchRouter from "./routes/search.routes.js";
 
 // routes declaration
@@ -34,6 +34,8 @@ app.use("/api/user", userRouter);
 app.use("/api/discover", discoverRouter);
 app.use("/api/artists", artistsRouter);
 app.use("/api/albums", albumsRouter);
+app.use("/api/songs", songsRouter);
+
 // app.use("/getSongsByGenre", songsRouter); // not working
 // app.use("/api/search", searchRouter);
 

@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { songsByGenre } from "../controllers/songs.controllers.js";
+import { song } from "../controllers/songs.controllers.js";
 
 const router = Router();
 
-router.route("/:genre").get(songsByGenre);
+router.route("/:songid").get(song);
 
 export default router;

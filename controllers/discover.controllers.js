@@ -12,8 +12,13 @@ export const discover = async (req, res) => {
     try {
         const response = await fetch(url, options);
         const result = await response.json();
-        res.status(200).json(result);
+
+        const dataSet = {
+            item: result.data.browseStart.sections.items[0].sectionItems.items,
+        };
+
+        res.status(200).json(dataSet);
     } catch (error) {
-        res.status(500).json({ error: err.message });
+        res.status(500).json({ error: error.message });
     }
 };
